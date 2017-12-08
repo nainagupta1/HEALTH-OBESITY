@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Determine Obesity</title>
+	<link href='D:/Coding/GitHub/Obesity_Matters/css/bootstrap.css' rel='stylesheet'>
+	<link rel="stylesheet" href="Determine_Obesity.css" type="text/css"/>
+
+	<!-- Below is a portion of the BMI calculator -->
+	<script language="JavaScript">
+	<!--
+		function calculateBmi() {
+			var weight = document.bmiForm.weight.value
+			var height = document.bmiForm.height.value
+			if(weight > 0 && height > 0){	
+				var finalBmi = weight/(height/100*height/100)
+				document.bmiForm.bmi.value = finalBmi
+				if(finalBmi < 18.5){
+					document.bmiForm.meaning.value = "Underweight"
+				}
+				if(finalBmi >= 18.5 && finalBmi < 25){
+					document.bmiForm.meaning.value = "Healthy"
+				}
+				if(finalBmi >= 25 && finalBmi < 40){
+					document.bmiForm.meaning.value = "Overweight"
+				}
+				if(finalBmi >= 40){
+					document.bmiForm.meaning.value = "Obessed"
+				}
+			}
+			else{
+				alert("Please Fill in everything correctly")
+			}
+		}
+	//-->
+	</script>
+	<!-- The BMI Calcullator codes are retrieved from https://www.proglogic.com/code/javascript/calculator/bmi.php -->
+</head>
+
+<body>
+	<header>
+		<img src="header_img.png" class="center">
+	</header>
+
+	<!-- Below is the navigation bar -->
+	<div class="nav-wrapper">
+   		<nav class="nav-menu">
+      		<ul id="nav" class="clearfix">
+         		<li><a href="/causes">Causes</a></li>
+         		<li><a href="Risks.html" target="_blank">Risks</a></li>
+         		<li><a href="Determine_Obesity.html" target="_blank">Determine Obesity</a></li>
+         		<li><a href="/solutions">Solutions</a>
+         			<ul class="sub-menu">
+            			<li><a href="/die programmes">Diet Programmes</a></li>
+            			<li><a href="/sports">Sports</a></li>
+            			<li><a href="/pledge">Pledge</a></li>
+         			</ul>
+         		</li>
+         		<li><a href="/about">About Us</a></li>
+      		</ul>
+   		</nav>
+	</div>
+
+	<!-- Below is the content of the page -->
+	<p id="sum">How do I know if I am obessed or not, you may wonder. Well, this website provides two explicit ways to determine obesity.</p>
+	<p id="sum">One way is to measure your waist size. This is because people who are overweight have more fat on their waists.</p>
+	<p id="sum">Another way to determine obesity is using a BMI calculator. BMI stands for "Body Mass Index".</p>
+
+	<h1>Waist Size</h1>
+		<div class="container">
+			<div class="row">
+        		<div class="col-sm-7">
+					<p>Women with a waist size greater than 35 inches (89 centimeters) and men with a waist size greater than 40 inches (102 centimeters) have an increased risk for heart disease and type 2 diabetes. People with "apple-shaped" bodies (waist is bigger than the hips) also have an increased risk for these conditions.</p>
+				</div>
+	<!-- The waist size information is retrieved from https://medlineplus.gov/ency/patientinstructions/000348.htm -->
+				<div class="col-sm-5">
+					<img id="pic" src="apple_pear_body.jpg"> <!--pic retrieved from http://blog.sina.com.cn/s/blog_999e144c0102vkhp.html -->
+				</div>
+			</div>
+		</div> 
+
+	<h1>BMI</h1>
+		<div class="container">
+			<div class="row">
+        		<div class="col-sm-6">
+					<p id="BMI">Body mass index (BMI) is calculated using height and weight. It is used to estimate body fat.</p>
+					<p id="BMI">If your IBM is lower than 18.5, then you are underweight.</p>
+					<p id="BMI">There are three levels of being underweight:</p>
+					<ul id="fourthlist">
+						<li>If your BMI is between 17 and 18.5, then you are mildly thin.</li>
+						<li>If your BMI is between 16 and 17, then you are moderately thin.</li>
+						<li>If your BMI is below 16, then you are severely thin.</li>
+					</ul>
+				</div>
+				<div class="col-sm-6">
+					<p id="BMI">If your IBM is greater than 18.5 and is equal or lower than 25.0, then you are healthy.</p>
+					<p id="BMI">Starting at 25.0, the higher your BMI, the greater is your risk of developing obesity-related health problems. These ranges of BMI are used to describe levels of risk:</p>
+
+					<ul id="fourthlist">
+						<li>Overweight (not obese), if BMI is 25.0 to 29.9.</li>
+						<li>Class 1 (low-risk) obesity, if BMI is 30.0 to 34.9.</li>
+						<li>Class 2 (moderate-risk) obesity, if BMI is 35.0 to 39.9.</li>
+						<li>Class 3 (high-risk) obesity, if BMI is equal to or greater than 40.0.</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	<!-- The above information is retrieved from https://medlineplus.gov/ency/patientinstructions/000348.htm -->
+
+	<h2>BMI Calculator</h2>
+		<form name="bmiForm">
+			Your Weight(kg): <input type="text" name="weight" size="10"><br />
+			Your Height(cm): <input type="text" name="height" size="10"><br />
+			<input type="button" value="Calculate BMI" onClick="calculateBmi()"><br />
+			Your BMI: <input type="text" name="bmi" size="10"><br />
+			This Means: <input type="text" name="meaning" size="25"><br />
+			<input type="reset" value="Reset" />
+		</form>
+	<!-- The BMI Calculator codes are retrieved from https://www.proglogic.com/code/javascript/calculator/bmi.php -->
+
+		<p id="BMI">BMI provides the most useful population-level measure of overweight and obesity as it is the same for both sexes and for all ages of adults. However, it should be considered a rough guide because it may not correspond to the same degree of fatness in different individuals.</p>
+		<p id="BMI">For children, age needs to be considered when defining overweight and obesity.</p>
+
+	<h3>Children under 5 years of age:</h3>
+		<ul id="fifthlist">
+			<li>Overweight is weight-for-height greater than 2 standard deviations above WHO Child Growth Standards median;</li>
+			<li>Obesity is weight-for-height greater than 3 standard deviations above the WHO Child Growth Standards median.</li>
+		</ul>
+		<a id="li" href="http://www.who.int/childgrowth/standards/weight_for_height/en/">——Charts and tables: WHO child growth standards for children aged under 5 years</a>
+
+	<h3>Children aged between 5–19 years</h3>
+		<ul id="fifthlist">
+			<li>Overweight is BMI-for-age greater than 1 standard deviation above the WHO Growth Reference median;</li>
+			<li>Obesity is greater than 2 standard deviations above the WHO Growth Reference median.</li>
+		</ul>
+		<a id="li" href="http://www.who.int/growthref/who2007_bmi_for_age/en/">——Charts and tables: WHO growth reference for children aged between 5–19 years</a>
+	<!-- The information above is retrieved from http://www.who.int/mediacentre/factsheets/fs311/en/ -->
+
+	<!-- Below is the footer -->
+	<div id="mission" class="text-center">
+    	<div class="container">
+      		<h4><small>Our mission</small><br />Join us in helping people become healthy</h4>
+
+      			<p class="lead">We believe it is essential to be aware of obesity.</p>
+      			<p class="lead">We believe that healthy people are more productive workers.</p>
+      			<p class="lead">Find support, ask questions and share your experiences within our community.</p>
+
+      		<div id='social-buttons'>
+        		<button class='btn btn-lg btn-twitter'><img id="btn" src="twitter.jpg"></button>
+        		<button class='btn btn-lg btn-facebook'><img id="btn" src="facebook.jpg"></button>
+      		</div>
+    	</div>
+  	</div>
+
+</body>
+</html>

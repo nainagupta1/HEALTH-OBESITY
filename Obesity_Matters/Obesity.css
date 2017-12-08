@@ -1,0 +1,29 @@
+header {
+  text-align: center;
+  background: url("D:/Coding/Obesity/header 1.jpg");
+  background-size: cover;
+ }
+
+ a {
+ 	color: white;
+ }
+
+ul {
+    padding: 10px;
+    background: black;
+ }
+
+ li {
+   display: inline;
+   padding: 0px 10px 0px 10px;
+ }
+
+body {
+	background-image: url("Obesity/background2.png");
+	background-size: cover;
+    margin: 0 auto;
+}
+
+h1 {
+	font-size: 70px;
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+	<head></head>
+	<body bgcolor="#fffcfc">
+<doctype html public "- w3cdtd 3.2 en">
+	<title>New BMI Calculator</title>
+	<!-- javascript modified from www.prologic.com/code/javascript/calculator/bmi.php -->
+	<script type="text/javascript" async src="http://www.google-analytics.com/ga.js"></script>
+	<script language="JavaScript">
+		<!--
+		function calculateBmi() {
+			var weight = document.bmiForm.weight.value
+			var height = document.bmiForm.height.value
+
+			var weightscale = 1
+			if (document.getElementById('weight_unit_1b').checked) {
+				var weightscale = 0.453592
+				var weight = weight*weightscale
+			}
+			if (document.getElementById('weight_unit_1b').checked) {
+				var weightscale = 0.453592
+				var weight = weight*weightscale
+			}
+			if (document.getElementById('height_unit_in').checked) {
+				var height = height*2.54
+			}
+
+			if (weight > 0 && height > 0) {
+
+				var oldBmi = weight/(height/100*height/100)
+				document.bmiForm.bmi.value = oldBmi.toPrecision(4)
+				var newBmi = 1.3*weight/(height/100*height/1000*Math.sqrt(height/100.))
+				document.bmiForm.newbmi.value = newBmi.toPrecision(4)
+
+				if (newBmi < 18.5) {
+						document.bmiForm.newmeaning.value = "underweight."
+					}
+					else if (newBmi >= 18.5 && newBmi < 25) {
+						document.bmiForm.newmeaning.value = "healthy."
+					}
+					else if (newBmi >= 25 && newBmi < 30) {
+						document.bmiForm.newmeaning.value = "overweight."
+					}
+					else if (newBmi >= 30) {
+						document.bmiForm.newmeaning.value = "obese."
+					}
+
+					if (oldBmi < 18.5) {
+						document.bmiForm.meaning.value = "underweight."
+					}
+					else if (oldBmi >= 18.5 && oldBmi < 25) {
+						document.bmiForm.meaning.value = "healthy."
+					}
+					else if (oldBmi >= 25 && oldBmi < 30) {
+						document.bmiForm.meaning.value = "overweight."
+					}
+					else if (oldBmi >= 30) {
+						document.bmiForm.meaning.value = "obese."
+					}
+
+					var targetupper = 25/1.3*(height/100*height/100*Math.sqrt(height/100.))
+					var targetlower = 18.5/1.3*(height/100*height/100*Math.sqrt(height/100.))
+					if (document.getElementById('weight_unit_1b').checked) {
+						var targetupper = targetupper/weightscale
+						var targetlower = targetlower/weightscale
+						document.bmiForm.weightunit.value = "1bs"
+					}
+					else if (document.getElementById('weight_unit_kg').checked) {
+						document.bmiForm.weightunit.value = "kgs"
+					}
+					var targetupper = targetupper.toPrecision(4)
+					var targetlower = targetlower.toPrecision(4)
+					document.bmiForm.targetupper.value = targetupper;
+					document.bmiForm.targetlower.value = targetlower;
+				}
+				else {
+					alert("Please fill in everything correctly")
+				}
+			}
+		}
+		//-->
+	</script>
+</doctype>
+	</body>
+</html>
